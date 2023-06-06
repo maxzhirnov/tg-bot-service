@@ -41,3 +41,13 @@ func handleSend() gin.HandlerFunc {
 		}
 	}
 }
+
+func handleIndex() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"message": "Hello World",
+			"status":  "OK",
+		},
+		)
+	}
+}
